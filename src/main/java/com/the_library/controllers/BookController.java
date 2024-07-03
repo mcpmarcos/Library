@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.the_library.models.Book;
@@ -20,7 +21,7 @@ public class BookController {
     BookService service;
     
     @PostMapping("/add")
-    public ResponseEntity<String> createBook(Book book){
+    public ResponseEntity<String> createBook(@RequestBody Book book){
         return service.createBook(book);
     }
     
