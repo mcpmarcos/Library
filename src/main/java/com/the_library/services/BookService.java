@@ -27,13 +27,10 @@ public class BookService {
 
     }
 
-    /*
-     * 
-     public BookDTO findById(Integer id){
-         Book book = repository.findById(id);
-         return createDTO(book);
-     }
-    */
+    public BookDTO findById(Integer id){
+        Book book = repository.findById(id).get();
+        return createDTO(book);
+    }
 
     public List<BookDTO> findAllBooks(){
         List<Book> books = repository.findAll();

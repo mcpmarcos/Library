@@ -26,13 +26,10 @@ public class BookController {
         return service.createBook(bookDTO);
     }
     
-    /*
-     * 
-     @GetMapping("/books/{id}")
-     public BookDTO findById(@PathVariable Integer id) {
-         return service.findById(id);
-     }
-    */
+    @GetMapping("/books/{id}")
+    public BookDTO findById(@PathVariable Integer id) {
+        return service.findById(id);
+    }
     
     @GetMapping("/books")
     public List<BookDTO> findAllBooks() {
