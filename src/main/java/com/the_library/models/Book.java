@@ -20,4 +20,15 @@ public class Book {
     
     private String author;
 
+    public Book(Integer id, String tittle, String author) {
+        this.id = id;
+        this.tittle = tittle;
+        this.author = author;
+    }
+
+    public Book() {
+    }
+
+    
+
 }

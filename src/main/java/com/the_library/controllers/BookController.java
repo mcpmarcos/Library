@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.the_library.DTO.BookDTO;
 import com.the_library.models.Book;
 import com.the_library.services.BookService;
 
@@ -20,18 +21,21 @@ public class BookController {
     @Autowired
     BookService service;
     
-    @PostMapping("/add")
-    public ResponseEntity<String> createBook(@RequestBody Book book){
-        return service.createBook(book);
+    @PostMapping("/books")
+    public ResponseEntity<Book> createBook(@RequestBody BookDTO bookDTO){
+        return service.createBook(bookDTO);
     }
     
-    @GetMapping("/books/{id}")
-    public Optional<Book> findById(@PathVariable Integer id) {
-        return service.findById(id);
-    }
+    /*
+     * 
+     @GetMapping("/books/{id}")
+     public BookDTO findById(@PathVariable Integer id) {
+         return service.findById(id);
+     }
+    */
     
     @GetMapping("/books")
-    public List<Book> findAllBooks() {
+    public List<BookDTO> findAllBooks() {
         return service.findAllBooks();
     }
 
