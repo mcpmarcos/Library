@@ -10,13 +10,13 @@ Book API being gradually developed with the purpose of improving knowledge about
 
 3 - After opening the project in your IDE, open the application.properties file to configure the user and password that Spring will use to try to access the database
 
-## Tecnologias:
+## Technologies:
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 
 
-## Conecte-se comigo:
+## Find me and stay connected:
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mcpmarcos/) 
 
