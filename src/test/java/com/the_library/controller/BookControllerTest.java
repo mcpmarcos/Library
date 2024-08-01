@@ -46,6 +46,7 @@ public class BookControllerTest {
     @Test
     void returnedBookListTest() throws Exception{
         Mockito.when(service.findAllBooks()).thenReturn(bookListDTO);
+
         this.mockMvc.perform(MockMvcRequestBuilders.get("/books").contentType("APPLICATION_JSON")).andExpect(MockMvcResultMatchers.status().isOk());
     }
 }

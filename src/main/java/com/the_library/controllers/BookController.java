@@ -36,5 +36,12 @@ public class BookController {
         return service.findAllBooks();
     }
 
+    @GetMapping("/test")
+    public String test(){
+        Book book = new Book(05, "Marvel Super heroes Vs Street Fighter", "Capcom and Stam Lee");
+        BookDTO bookDTO = service.createDTO(book);
+        service.createBook(bookDTO);
+        return book.getAuthor();
+    }
 
 }
